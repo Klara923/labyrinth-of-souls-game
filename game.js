@@ -190,7 +190,7 @@ function preload() {
 function setup() {
   noSmooth();
   c = createCanvas(800, 800);
-  c.style("position", "absolute");
+  c.parent("game-container");
 
   // images don't loose quality
   noSmooth();
@@ -222,7 +222,8 @@ function setup() {
   // Jane aswers granny first time
   button1 = createButton("Sure!");
   button1.mousePressed(dialogWithGranny2);
-  button1.position(550, 830);
+  button1.position(100, 730);
+  button1.parent("game-container");
   button1.addClass("button1");
   button1.hide();
 
@@ -230,7 +231,8 @@ function setup() {
   // Jane want to have bring cookies to mom
   button2 = createButton("Ok, no problem!");
   button2.mousePressed(happyGranny);
-  button2.position(550, 830);
+  button2.position(100, 730);
+  button2.parent("game-container");
   button2.hide();
   button2.addClass("button2");
 
@@ -238,7 +240,8 @@ function setup() {
   // Jane refuses grandma
   button3 = createButton("Ehhh, I'm too busy grandma :/");
   button3.mousePressed(angryGranny);
-  button3.position(1000, 830);
+  button3.position(550, 730);
+  button3.parent("game-container");
   button3.hide();
   button3.addClass("button3");
 
@@ -246,7 +249,8 @@ function setup() {
   // Jane will take cookies beacuse grandma is angry
   button4 = createButton("Okay, okay...");
   button4.mousePressed(happyGranny);
-  button4.position(750, 830);
+  button4.position(300, 730);
+  button4.parent("game-container");
   button4.hide();
   button4.addClass("button4");
 
@@ -254,7 +258,8 @@ function setup() {
   // Jane "say goodbye" to grandma
   button5 = createButton("Take cookies from grandma");
   button5.mousePressed(theEndOfTheDialogWithGranny);
-  button5.position(750, 830);
+  button5.position(300, 730);
+  button5.parent("game-container");
   button5.hide();
   button5.addClass("button5");
 
@@ -262,7 +267,8 @@ function setup() {
   // Jane is starting dialog with Tamashi
   button7 = createButton("Oh shoot! Who are you?!");
   button7.mousePressed(dialogWithGhost2);
-  button7.position(750, 830);
+  button7.position(300, 730);
+  button7.parent("game-container");
   button7.hide();
   button7.addClass("button7");
 
@@ -270,7 +276,8 @@ function setup() {
   // Jane is continuing dialog with Tamashi
   button8 = createButton("What happened?");
   button8.mousePressed(dialogWithGhost3);
-  button8.position(750, 830);
+  button8.position(300, 730);
+  button8.parent("game-container");
   button8.hide();
   button8.addClass("button8");
 
@@ -278,7 +285,8 @@ function setup() {
   // Jane is continuing dialog with Tamashi
   button9 = createButton("What?! How?");
   button9.mousePressed(dialogWithGhost4);
-  button9.position(750, 830);
+  button9.position(300, 730);
+  button9.parent("game-container");
   button9.hide();
   button9.addClass("button9");
 
@@ -286,56 +294,64 @@ function setup() {
   // Jane is continuing dialog with Tamashi
   button10 = createButton("Continue...");
   button10.mousePressed(continueGame);
-  button10.position(750, 830);
+  button10.position(300, 730);
+  button10.parent("game-container");
   button10.hide();
   button10.addClass("button10");
   // button11
   // Jane has dialog with Tamashi after winning the mini game ghost
   button11 = createButton("Continue...");
   button11.mousePressed(finalScreen);
-  button11.position(750, 830);
+  button11.position(300, 730);
+  button11.parent("game-container");
   button11.hide();
   button11.addClass("button11");
   // button12
   // Jane starts dialog with cat
   button12 = createButton("Sorry, I don't have any fish and I'm really busy.");
   button12.mousePressed(dialogWithCatState2);
-  button12.position(720, 830);
+  button12.position(270, 730);
+  button12.parent("game-container");
   button12.hide();
   button12.addClass("button12");
   // button13
   // Jane refuses to cat
   button13 = createButton("Sorry, I'm in a hurry");
   button13.mousePressed(dialogWithCatState3);
-  button13.position(550, 830);
+  button13.position(100, 730);
+  button13.parent("game-container");
   button13.hide();
   button13.addClass("button13");
   // button14
   // Jane accepts the cat's regueast, start of fishing mini game
   button14 = createButton("Okay, no problem :)");
   button14.mousePressed(fishingMiniGameState);
-  button14.position(900, 830);
+  button14.position(450, 730);
+  button14.parent("game-container");
   button14.hide();
   button14.addClass("button14");
   // button15
   // Jane accepts the cat's request, start of fishing mini game
   button15 = createButton("Ahhh... Okay");
   button15.mousePressed(fishingMiniGameState);
-  button15.position(750, 830);
+  button15.position(300, 730);
+  button15.parent("game-container");
   button15.hide();
   button15.addClass("button15");
   // button16
   // short dialog with cat after fishing mini game, Jane takes fish from cat
   button16 = createButton("Take a fish from cat");
   button16.mousePressed(forestWithHouseAfterDialogWithCat);
-  button16.position(780, 830);
+  button16.position(330, 730);
+  button16.parent("game-container");
   button16.hide();
   button16.addClass("button16");
   // button17
   // Jane answers mom, end of the game
   button17 = createButton("Ahhh... It's a long story...");
   button17.mousePressed(thanks);
-  button17.position(760, 820);
+  button17.position(310, 720);
+  button17.parent("game-container");
   button17.hide();
   button17.addClass("button17");
 
@@ -343,19 +359,22 @@ function setup() {
   // Play button, start of the game
   button18 = createButton("Play");
   button18.mousePressed(descriptionOfGame);
-  button18.position(780, 750);
+  button18.position(330, 650);
+  button18.parent("game-container");
   button18.hide();
   button18.addClass("button18");
 
   button19 = createButton("Play");
   button19.mousePressed(gameStart);
-  button19.position(600, 750);
+  button19.position(150, 650);
+  button19.parent("game-container");
   button19.hide();
   button19.addClass("button19");
 
   button20 = createButton("I'm too scared o~o");
   button20.mousePressed(backToStart);
-  button20.position(1000, 750);
+  button20.position(550, 650);
+  button20.parent("game-container");
   button20.hide();
   button20.addClass("button20");
 }

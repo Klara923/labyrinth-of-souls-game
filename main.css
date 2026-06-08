@@ -1,7 +1,22 @@
+html,
 body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   background-color: black;
-  margin: 100px;
-  margin-left: 450px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#game-container {
+  position: relative;
+  width: 800px;
+  height: 800px;
 }
 
 .button1 {
